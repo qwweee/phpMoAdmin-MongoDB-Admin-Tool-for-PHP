@@ -2156,7 +2156,10 @@ ol a {font-weight: bold;}
 }
 echo $html->header($headerArgs);
 
-echo $html->jsLoad(array('jquery', 'jqueryui'));
+//echo $html->jsLoad(array('jquery', 'jqueryui'));
+echo '<script type="text/javascript" charset="UTF-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js"></script>';
+
 $baseUrl = $_SERVER['SCRIPT_NAME'];
 
 $db = (isset($_GET['db']) ? $_GET['db'] : (isset($_POST['db']) ? $_POST['db'] : 'admin')); //admin is in every Mongo DB
